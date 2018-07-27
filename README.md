@@ -1,7 +1,3 @@
-# Note: BrandiW finished version. 
-
-Please refer to the [unfinished sim city bomb](https://github.com/ga-students/sim-city-bomb-squad) squad lab found on the [ga-students Github account](https://github.com/ga-students).
-
 # JavaScript Timers: Sim City Bomb Squad
 Someone left a bomb in the middle of Sim City. It's your first day on the
 bomb squad and it's your job to defuse it. The entire city is relying on
