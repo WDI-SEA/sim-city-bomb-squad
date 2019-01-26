@@ -1,3 +1,45 @@
-body{
+
+.unexploded {
+  background-image: url('./img/simcity.jpg');
+}
+
+.exploded {
+  background-image: url('./img/explosion.jpg')
+}
+
+
+body {
   text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  margin: 0 auto;
+  background-color: black;
+  padding: 20px;
+  width: 170px
+}
+
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+
+.timer-box {
+  font-family: 'Major Mono Display', Orbitron, sans-serif;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#bottom-button {
+  width: 90%;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: Roboto, sans-serif;
+  margin-top: 8px;
 }

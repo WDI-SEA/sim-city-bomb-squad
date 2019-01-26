@@ -1,0 +1,9 @@
+Notes
+
+requirements
+-keep proper indentation
+-make css classes to style the page dynamically
+-use functions to reduce redundancy
+-Use setInterval and setTimeout appropriately
+-Use clearInterval and clearTimeout to remove intervals and timeouts
+

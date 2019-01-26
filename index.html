@@ -3,8 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Sim City Bomb Squad</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron|Roboto|Major+Mono+Display" rel="stylesheet">
   </head>
-  <body>
-    <!-- Your code here -->
+  <body class="unexploded">
+    <main>
+      <div class="timer-box red">
+        <p>00:00:00:00</p>
+      </div>
+      <div class="wires">
+        <img class="wire wire0" id="blue" src="./img/uncut-blue-wire.png" alt="blue wire">
+        <img class="wire wire0" id="green" src="./img/uncut-green-wire.png"alt="green wire">
+        <img class="wire wire0" id="red" src="./img/uncut-red-wire.png" alt="red wire">
+        <img class="wire wire0" id="white" src="./img/uncut-white-wire.png" alt="white wire">
+        <img class="wire wire0" id="yellow" src="./img/uncut-yellow-wire.png" alt="yellow">
+      </div>
+      <div class="reset-box">
+        <button id="bottom-button">RESET</button>
+      </div>
+    </main>
+    <script src="./bomb.js"></script>
   </body>
 </html>
