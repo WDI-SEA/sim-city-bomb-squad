@@ -3,8 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>Sim City Bomb Squad</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-  <body>
-    <!-- Your code here -->
+  <body class="unexploded">
+    <div id="box">
+      <img id="blue" src="./img/uncut-blue-wire.png">
+      <img id="green" src="./img/uncut-green-wire.png">
+      <img id="white" src="./img/uncut-white-wire.png">
+      <img id="red" src="./img/uncut-red-wire.png">
+      <img id="yellow" src="./img/uncut-yellow-wire.png">
+      <div>
+        <h2 id="timer">30</h2>
+      </div>
+      <button id="reset">Start Game!</button>
+    </div>
+    <h1 id="message"></h1>
+
+    <!-- Sounds -->
+    <audio id="buzz" src="./sounds/Electricity.wav"></audio>
+    <audio id="explode" src="./sounds/BldgExplode.wav"></audio>
+    <audio id="siren" src="./sounds/Siren.wav" loop></audio>
+    <audio id="success" src="./sounds/success.ogg"></audio>
+    <audio id="yay" src="./sounds/CrowdYay.wav"></audio>
+
+    <!-- Scripts -->
+    <script src="bomb.js"></script>
   </body>
 </html>
