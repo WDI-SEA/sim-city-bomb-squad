@@ -4,3 +4,44 @@ body {
   padding: 0;
   text-align: center;
 }
+
+
+body {
+  background-image: url("img/simcity.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+p {
+  color: #ff0000;
+  font-size: 1.5em;
+  font-family: monospace;
+
+}
+
+/*  This class tag when applied will change the background image  */
+.flat {
+  background-image: url("img/explosion.jpg");
+}
+
+.gamespace {
+  background-color: black;
+  width: 200px;
+  padding: .5em;
+  margin: 4em auto;
+  
+}
+
+.green {
+  color: #00ff00;
+
+}
+button {
+  width: 90%;
+  margin: .4em;
+  padding: .2em
+  
+
+}
+
