@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     const STARTING_TIME = 30;
     let remainingTime = 0;
-    let gameOver = false;
+    let gameOver = true;
     let countdown = null;
 
     let wiresToCut = [];
@@ -27,13 +27,25 @@ document.addEventListener("DOMContentLoaded", function(){
     wirebox.addEventListener("click", wireClick);
 
     function reset(){
-        console.log("clicked reset")
+        timer.classList.remove("green");
+        body.classList.remove("flat");
+        for(let wire in wireState){
+            wireState[wire] = false;
+        }
+        wiresToCut = [];
+
+        for (let i = 0; i < wirebox.children.length; i++){
+            let color = wirebox.children[i].id;
+            wirebox.children[i].src = "img/uncut-" + color + "-wire.png";
+        }
+
         init()
     }
         
 
     function init() {
         remainingTime = STARTING_TIME;
+        gameOver = false;
         for (const color in wireState){
             let randoNum = Math.random();
             if (randoNum > 0.5){
@@ -47,8 +59,24 @@ document.addEventListener("DOMContentLoaded", function(){
     
 
     function wireClick(e) {
-        console.log("clicked wire box")
-        console.log(e.target.id)
+        
+        console.log("you clicked " + e.target.id)
+        let color = e.target.id;
+        if (gameOver === false && wireState[color] === false){
+            e.target.src = "img/cut-" + color + "-wire.png";
+            wireState[color] = true;
+            let wireIndex = wiresToCut.indexOf(color);
+            if (wireIndex > -1){
+            console.log("correct")
+            wiresToCut.splice(wireIndex, 1);
+                if (wiresToCut.length < 1){
+                    endGame(true);
+                }
+            } else{
+                console.log("bad news")
+                endGame(false);
+            }
+        }
     }
 
     function updateClock(){
